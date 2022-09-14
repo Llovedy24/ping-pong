@@ -2,24 +2,24 @@ const INITIAL_VELOCITY = 0.025
 const VELOCITY_INCREASE = 0.00001
 
 export default class Ball {
-    constructor(ballElm) {
-        this.ballElm = ballElm
+    constructor(ballElem) {
+        this.ballElem = ballElem
         this.reset()
     }
     get x() {
-        return parseFloat(getComputedStyle(this.ballElm).getPropertyValue("--x"))
+        return parseFloat(getComputedStyle(this.ballElem).getPropertyValue("--x"))
     }
     set x(value) {
-        this.ballElm.style.setProperty("--x", value)
+        this.ballElem.style.setProperty("--x", value)
     }
     get y() {
-        return parseFloat(getComputedStyle(this.ballElm).getPropertyValue("--y"))
+        return parseFloat(getComputedStyle(this.ballElem).getPropertyValue("--y"))
     }
     set y(value) {
-        this.ballElm.style.setProperty("--y", value)
+        this.ballElem.style.setProperty("--y", value)
     }
     rect() {
-        return this.ballElm.getBoundingClientRect()
+        return this.ballElem.getBoundingClientRect()
     }
     reset() {
         this.x = 50
