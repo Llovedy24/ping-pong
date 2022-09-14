@@ -1,4 +1,4 @@
-const speed = 0.02 
+const SPEED = 0.02 
 export default class Paddle {
     constructor(paddleElem) {
         this.paddleElm = paddleElem
@@ -10,16 +10,16 @@ export default class Paddle {
             getComputedStyle(this.paddleElm).getPropertyValue("--position")
         )
     }
-    set position(getPropertyValue) {
+    set position(value) {
         this.paddleElm.style.setProperty("--position", value)
     }
-    reset() {
+    rect() {
         return this.paddleElm.getBoundingClientRect()
     }
     reset() {
         this.position = 50
     }
-    update(delta, ballheight) {
+    update(delta, ballHeight) {
         this.position += SPEED * delta * (ballHeight - this.position)
     }
 }
