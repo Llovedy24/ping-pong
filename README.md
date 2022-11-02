@@ -21,3 +21,4 @@ This game is a 2 player game (Player1, Player2) tennis styled game. It requires 
 - Apply collision with ball and game board’s top/bottom side, i.e. if the ball touches the top/bottom of the board then multiply -1 * y velocity of the ball.
 - Apply collision with ball and game left and right side of the game board. i.e. increase the score and change game state to serve the state.
 - Apply collision with ball and paddles. i.e. multiply -1 * x velocity of the ball.
+v2
